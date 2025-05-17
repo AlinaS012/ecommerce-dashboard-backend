@@ -1,7 +1,11 @@
 const { MongoClient } = require('mongodb');
 
 const uri = "mongodb+srv://alinasmehdi:GcBY3BN59PzotKKS@cluster0.yx0b1e9.mongodb.net/Ecommerce?retryWrites=true&w=majority&appName=Cluster0"
-const options = {};
+const options = {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  ssl: true, 
+};
 
 let client;
 let clientPromise;
